@@ -1218,8 +1218,8 @@ function resetLevel(){
   resultButtonAction = resetLevel;
   $hud.style.opacity='1';
 
-  camera.position.set(-6, GROUND_Y, 8);
-  yaw=-0.6; pitch=0;
+  camera.position.set(-18, GROUND_Y, 6.6);
+  yaw=-1.2; pitch=0;
   camera.rotation.set(pitch,yaw,0,'YXZ');
   camera.rotation.z=0;
   velocity.set(0,0,0);
@@ -1561,8 +1561,8 @@ function onHit(msg){
   if(lives<=0){ finish(false,'Жизни закончились. Попробуй ещё раз.'); return; }
   if(msg) showMsg(msg);
   if(insideSchool) return;
-  camera.position.set(-6, GROUND_Y, 8);
-  yaw=-0.6; pitch=0;
+  camera.position.set(-18, GROUND_Y, 6.6);
+  yaw=-1.2; pitch=0;
   camera.rotation.set(pitch,yaw,0,'YXZ');
   velocity.set(0,0,0);
 }
@@ -1626,8 +1626,8 @@ function animate(){
 }
 
 buildWorld();
-camera.position.set(-6,GROUND_Y,8);
-yaw=-0.6;pitch=0;
+camera.position.set(-18,GROUND_Y,6.6);
+yaw=-1.2;pitch=0;
 camera.rotation.set(pitch,yaw,0,'YXZ');
 renderer.render(scene,camera);
 </script>
