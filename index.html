@@ -1331,8 +1331,12 @@ function update(dt){
   const running=(keys.shift||keys.shiftleft||keys.shiftright)?true:false;
   const walkSpeed=elevatorMoving?0:(3.2*(running?1.8:1));
 
-  const fwdIn  = ((keys.w||keys.arrowup?1:0)    - (keys.s||keys.arrowdown?1:0));
-  const sideIn = ((keys.d||keys.arrowright?1:0) - (keys.a||keys.arrowleft?1:0));
+  const kW = keys.w || keys['keyw'];
+  const kA = keys.a || keys['keya'];
+  const kS = keys.s || keys['keys'];
+  const kD = keys.d || keys['keyd'];
+  const fwdIn  = ((kW||keys.arrowup?1:0)    - (kS||keys.arrowdown?1:0));
+  const sideIn = ((kD||keys.arrowright?1:0) - (kA||keys.arrowleft?1:0));
 
   _fwd.set(-Math.sin(yaw),0,-Math.cos(yaw));
   _rgt.set( Math.cos(yaw),0,-Math.sin(yaw));
