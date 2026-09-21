@@ -1322,7 +1322,7 @@ function update(dt){
   if($classPanel.style.display==='flex') return;
 
   lightTime+=dt;
-  if(light==='red'&&lightTime>5){lightTime=0;setLight('green')}
+  if(light==='red'&&lightTime>10){lightTime=0;setLight('green')}
   else if(light==='green'&&lightTime>8){lightTime=0;setLight('yellow')}
   else if(light==='yellow'&&lightTime>2){lightTime=0;setLight('red')}
   if(light==='red' && Math.floor(lightTime)!==Math.floor(lightTime-dt)) beepCross();
